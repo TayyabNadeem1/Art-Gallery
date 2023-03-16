@@ -7,12 +7,13 @@
     <title></title>
 </head>
     <style>
-        .container{
+   
+    .container{
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     
-}
+    }
 
 html{
     font-size: 62.5% ;
@@ -37,9 +38,11 @@ p, li, i{
     
 }
 h1, h2, h3{
-    margin-bottom: 0.5em;
-    letter-spacing: 0.15em;
+
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.15rem;
     font-weight: 500 ;
+
 }
 
 .lg-heading{
@@ -50,6 +53,11 @@ h1, h2, h3{
     font-size:0.5rem;
 }
 
+.my-heading{
+    font-size:2.5rem;
+    font-weight:light;
+    
+}
 .text-light{
     color: #f4f4f4;
 }
@@ -58,7 +66,7 @@ h1, h2, h3{
     color:#333333;
 }
 
-        /*#############################################################*/
+  /*#############################################################*/
    .header{
     position:relative;
     height:100vh;
@@ -81,7 +89,6 @@ h1, h2, h3{
     float: left;
     
 }
-
 
 .navbar .nav-items{
     float: right;
@@ -125,7 +132,6 @@ h1, h2, h3{
     font-size: 1.5em;
     font-weight: 500;
 }
-
 
 /*###########################################  SPLIT  ##############*/
 /* Split the screen in half */
@@ -171,14 +177,11 @@ h1, h2, h3{
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top:80px;
+  margin-top:90px;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.bottom{
-   
-}
 /* Style the image inside the centered container, if needed */
 .centered img {
   width: 150px;
@@ -191,12 +194,14 @@ h1, h2, h3{
   padding-top:20px;
   margin: auto;
 }
+
 .form {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
   margin: 0 auto 100px;
+  margin-top:200px;
   padding: 35px;
   text-align: center;
  
@@ -204,7 +209,6 @@ h1, h2, h3{
 .form input {
   
   outline: 0;
-  
   width: 100%;
   border: 0;
   margin: 0 0 15px;
@@ -225,36 +229,44 @@ h1, h2, h3{
   
   cursor: pointer;
 }
+
 .form button:hover,.form button:active,.form button:focus {
   background: #43A047;
 }
+
 .form .message {
   margin: 15px 0 0;
-  color: #b3b3b3;
+  color: #000000;
   font-size: 12px;
 }
+
 .form .message a {
-  color: #4CAF50;
+  color: #324a34;
   text-decoration: none;
 }
+
 .form .register-form {
   display: none;
 }
+
 .container {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
 }
+
 .container:before, .container:after {
   content: "";
   display: block;
   clear: both;
 }
+
 .container .info {
   margin: 50px auto;
   text-align: center;
 }
+
 .container .info h1 {
   margin: 0 0 15px;
   padding: 0;
@@ -262,13 +274,16 @@ h1, h2, h3{
   font-weight: 300;
   color: #1a1a1a;
 }
+
 .rightshift{
     margin-top:200px;
 }
+
     </style>
+
 <body>
     <header class="header">
-        <div class="split left">
+          <div class="split left">
             <div class="centered-left header-content bottom">
             
             <h1 class="lg-heading text-light">Dextérité</h1>
@@ -277,29 +292,21 @@ h1, h2, h3{
        </div>
      
         <div class="split right">
-            <div class="rightshift">
-            <div class="centered-right header">
-            
-            <h1 class="lg-heading text-black"> Welcomeback to Dextérité</h1>
-            </div>
-          <div class="form">
-            <form class="register-form">
-              <input type="text" placeholder="name"/>
-              <input type="password" placeholder="password"/>
-              <input type="text" placeholder="email address"/>
-              <button>create</button>
-              <p class="message">Already registered? <a href="#">Sign In</a></p>
-            </form>
-            <form class="login-form">
+           
+            <div class="form">
+               <h1 class="lg-heading">Welcomeback to Dextérité</h1>
+                
+                <form class="login-form">
               <input type="text" placeholder="username"/>
+              
               <input type="password" placeholder="password"/>
-              <button>login</button>
-              <p class="message">Not registered? <a href="#">Create an account</a></p>
-            </form>
-          </div>
-        </div>
 
-      </div>
+              <button type="submit" formaction="Home.aspx">Login</button>
+              <p class="message">Not Registered? <a href="SignUp.aspx">SignUp</a></p>
+            </form>
+            </div>
+        </div>
+      
       
         
       

@@ -298,16 +298,11 @@ h1, h3{
               <input type="text" placeholder="name"/>
               <input type="text" placeholder="email"/>
               <input type="password" placeholder="password"/>
-              <button>SignUp</button>
+              <button type="submit" formaction="Home.aspx">SignUp</button>
               <p class="message">Already have an account? <a href="Login.aspx">Login</a></p>
             </form>
             </div>
         </div>
-      
-      
-        
-      
-        
     </header>
 </body>
 </html>
