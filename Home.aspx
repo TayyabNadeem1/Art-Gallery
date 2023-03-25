@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="DB_Project.Home1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="DB_Project.Home1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     
-    
+    <script src="https://kit.fontawesome.com/92ce2e27c0.js" crossorigin="anonymous"></script>
     <style>
 
     .container{
@@ -87,7 +87,7 @@ h1, h2, h3{
 .navbar{
     /* border: 2px solid#f4f4f4; */
         padding: 1rem;
-         border-bottom: 2px solid #808080;
+         border-bottom: 2px solid #324a34;
          background-color:#f4f4f4;
          position:relative;
 }
@@ -223,23 +223,28 @@ navbar a{
     margin-top: 12px;
     padding-right: 11px;
     text-align: center;
- 
+    float:left;
 }
+
+.symbols{
+
+}
+
 .form input {
   position: relative;
     outline: 0;
     width: 100%;
-    width: 83%;
+    width: 75%;
     margin: -7px 0px 3px;
     padding: 6px;
     border-radius: 30px;
     box-sizing: border-box;
     font-size: 14px;
-    left: -20px;
-    
+
+    float:left;
 }
 .form button {
-    text-transform: uppercase;
+     text-transform: uppercase;
     outline: 0;
     background: #324a34;
     width: 25%;
@@ -250,9 +255,32 @@ navbar a{
     cursor: pointer;
     border-radius: 30px;
     position: relative;
-    right: -100px;
-    top: -35px;
+    right: -85px;
+    margin: 5px;
+    top: -40px;
     color: #ffff;
+}
+
+.like-box{
+
+}
+
+.like-box button{
+        text-transform: uppercase;
+    outline: 0;
+    background: #324a34;
+    width: 25%;
+    border: 0;
+    padding: 0px;
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    float: right;
+    position: relative;
+    color: #ffff;
+    top: -33px;
+    position: relative;
 }
 
 .form button:hover,.form button:active,.form button:focus {
@@ -290,15 +318,21 @@ navbar a{
 .profile-container  h2 {
      margin-bottom: 0.5rem;
     letter-spacing: 0.15rem;
+    font-weight: 700;
+    text-align: center;
+    font-size: 15px;
+}
+.a h2{
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.15rem;
     font-weight: 700 ;
     text-align:center;
-
 }
 
 .profile-container{
           background-color: #f4f4f4;
     width: 100%;
-    border-bottom: 2px solid #808080;
+    border-bottom: 2px solid #324a34;
     padding-bottom: 10px;
     margin: 1px;
     text-align: center;
@@ -311,26 +345,91 @@ navbar a{
 .footer{
     background:#324a34;
     color: black;
-    padding: 2rem;
+    padding: 0.5rem;
     text-align: center;
 }
 
 .social-media-links i{
-    margin: 1.5rem;
+        margin: 1.5rem;
+    font-size: 40px;
 }
 
+.form i{
+             font-size: 23px;
+    color: #324a34;
+    float: right;
+    margin-left: 7px;
+    position: relative;
+    float: right;
+    top: -72px;
+    right: -73px;
+    
+}
+
+.fa-user:before{
+    content: "\f007";
+    right: -1px;
+    position: relative;
+}
+
+.navbar i{
+        font-size: 15px;
+    color: #324a34;
+    padding: 5px;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    border: 2px solid #324a34;
+    justify-content: center;
+    right: 16px;
+}
+/*################################# Search bar ############################*/
+
+.topnav {
+
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+
+
+
+
+.nav-items input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+  border-radius:30px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-items input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .nav-items input[type=text] {
+    border: 1px solid #ccc;  
+  }
     </style>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
         <div class="container">
-         <h1 class="logo lg-heading text-black">Dexterite</h1>
+         <h1 class="logo lg-heading text-black">Dextérité</h1>
             <ul class="nav-items">
-                <li class="nav-item text-light"><a href="Home.aspx" >Home</a></li>
-                <li class="nav-item text-light"><a href="about.html" >Messages</a></li>
-                <li class="nav-item text-light"><a href="contact.html">Profile</a></li>
                 
+                <li class="nav-item text-light"><a href="about.html" >Messages</a></li>
+                <li class="nav-item text-light"><a href="contact.html">Profile</li><i class="fa-solid fa-user"></i></a>
+                <input type="text" placeholder="Search..">
            </ul>
         </div>
         </nav>
@@ -338,45 +437,63 @@ navbar a{
         <h2 class="title">Featured Arts</h2>
         <div class="raw">
             <div class="col-5">
-                <div class="profile-container"> 
+                <div class="profile-container"><a href="UserPage.aspx">  
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2>
+                    <h2 class="text-black">someartist whocares</h2></a>
                 </div>
-               
                 <img src="What Is The Nickname Of Your Soul_.jpeg" />
-                <h2 class="text-red">Some Art</h2>
+               <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia perferendis voluptatem .</h4>
               
                 <div class="form">
+              
                 <form class="login-form">
-              <input type="text" placeholder="comment"/>
-              <button>post</button>
-            </form>
+                <input type="text" placeholder="comment"/>
+                <button>post</button>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+                    
+              </div>  
             </div>
-            </div>
+
+
             <div class="col-5">
-                 <div class="profile-container"> 
+                 <div class="profile-container"><a href="UserPage.aspx"> 
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2>
+                    <h2 class="text-black">someartist whocares</h2></a>
                 </div>
                 <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                <h2 class="text-red">Some Art</h2>
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
+               
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia perferendis .</h4>
 
                 <div class="form">
                 <form class="login-form">
               <input type="text" placeholder="comment"/>
               <button >post</button>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
             </form>
             </div>
             </div>
             <div class="col-5">
-                 <div class="profile-container"> 
+                 <div class="profile-container"> <a href="UserPage.aspx">
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2>
+                    <h2 class="text-black">someartist whocares</h2></a>
                 </div>
                 <img src="Portraiture Combining Natural Imagery And Negative Space - IGNANT.jpeg" />
-                <h2 class="text-red">Some Art</h2>
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia perferendis voluptatem saepe .</h4>
 
                 
@@ -384,34 +501,48 @@ navbar a{
                 <form class="login-form">
               <input type="text" placeholder="comment"/>
               <button>post</button>
-            </form>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+              
             </div>
             </div>
         </div>
         <div class="raw">
             <div class="col-5">
-                <div class="profile-container"> 
+                <div class="profile-container"> <a href="UserPage.aspx">
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2>
+                    <h2 class="text-black">someartist whocares</h2></a>
                 </div>
                 <img src="Cape Cod Collegiate.jpeg" /> 
-                <h2 class="text-red">Some Art</h2>
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia perferendis</h4>
                 
                 <div class="form">
                 <form class="login-form">
               <input type="text" placeholder="comment"/>
               <button>post</button>
-            </form>
-            </div>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+              
+                </div>
             </div>
             <div class="col-5">
-                 <div class="profile-container"> 
+                 <div class="profile-container"> <a href="UserPage.aspx">
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2>
+                    <h2 class="text-black">someartist whocares</h2></a>
                 </div>
                 <img src="Artist Profile_ Bea Modisett.jpeg" />
-                <h2 class="text-red">Some Art</h2>
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium  voluptatem saepe recusandae ducimus dolor laudantium cum. Incidunt, earum.</h4>
 
             
@@ -419,16 +550,23 @@ navbar a{
                 <form class="login-form">
               <input type="text" placeholder="comment"/>
               <button >post</button>
-            </form>
-            </div>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+             
+                </div>
             </div>
             <div class="col-5">
-                 <div class="profile-container"> 
+                 <div class="profile-container"> <a href="UserPage.aspx">
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2>
+                    <h2 class="text-black">someartist whocares</h2></a>
                 </div>
                 <img src="login_background.jpeg" />
-                <h2 class="text-red">Some Art</h2>
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia .</h4>
 
                 
@@ -436,8 +574,13 @@ navbar a{
                 <form class="login-form">
               <input type="text" placeholder="comment"/>
               <button>post</button>
-            </form>
-            </div>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+                
+                </div>
             </div>
         </div>
     </header>
@@ -447,7 +590,7 @@ navbar a{
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-twitter"></i>
-           <h1>Explore Cars &copy; 2021, All Rights Reserved</h1>
+           <h1>Explore Art &copy; 2021, All Rights Reserved</h1>
         </div>
     </footer>
 
