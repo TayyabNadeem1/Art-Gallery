@@ -619,8 +619,31 @@ div.search-box{
                 <div class="like-box">
                    <h2 class="text-red">Some Art</h2><button>Like</button>
                </div>
-                <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia .</h4>
-
+                <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia .</h4>         
+                <div class="form">
+                <form class="login-form">
+              <input type="text" placeholder="comment"/>
+              <button>post</button>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+        
+                </div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-5">
+                <div class="profile-container"> <a href="UserPage.aspx">
+                    <img src="The Natural Artist Dmitri Danish.jpeg"/>
+                    <h2 class="text-black">someartist whocares</h2></a>
+                </div>
+                <img src="Cape Cod Collegiate.jpeg" /> 
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
+                <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia perferendis</h4>
                 
                 <div class="form">
                 <form class="login-form">
@@ -631,7 +654,53 @@ div.search-box{
                 <i class="likee fa-regular fa-heart"></i>
                 </div>
                 </form>
-                
+              
+                </div>
+            </div>
+            <div class="col-5">
+                 <div class="profile-container"> <a href="UserPage.aspx">
+                    <img src="This Self-Taught Artist Draws Female Portraits Entirely By Scribbling (87 Pics).jpeg"/>
+                    <h2 class="text-black">someartist whocares</h2></a>
+                </div>
+                <img src="Artist Profile_ Bea Modisett.jpeg" />
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
+                <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium  voluptatem saepe recusandae ducimus dolor laudantium cum. Incidunt, earum.</h4>
+
+            
+                <div class="form">
+                <form class="login-form">
+              <input type="text" placeholder="comment"/>
+              <button >post</button>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+             
+                </div>
+            </div>
+            <div class="col-5">
+                 <div class="profile-container"> <a href="UserPage.aspx">
+                    <img src="Artist Creates Incredibly Illuminated Architectural Drawings (12 Pics).jpeg"/>
+                    <h2 class="text-black">someartist whocares</h2></a>
+                </div>
+                <img src="login_background.jpeg" />
+                <div class="like-box">
+                   <h2 class="text-red">Some Art</h2><button>Like</button>
+               </div>
+                <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia .</h4>         
+                <div class="form">
+                <form class="login-form">
+              <input type="text" placeholder="comment"/>
+              <button>post</button>
+                <div class="symbols">
+                <i class="sharee fa-solid fa-share"></i>
+                <i class="likee fa-regular fa-heart"></i>
+                </div>
+                </form>
+        
                 </div>
             </div>
         </div>
