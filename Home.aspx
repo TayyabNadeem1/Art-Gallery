@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    
+       
     <script src="https://kit.fontawesome.com/92ce2e27c0.js" crossorigin="anonymous"></script>
     <style>
 
@@ -34,7 +34,7 @@ ul .li{
     
 }
 ul{
-    margin-right:50px;
+    margin-right:-50px;
 }
 a{
     font-size: 1.6rem;
@@ -111,8 +111,9 @@ h1, h2, h3{
 
 
 .navbar .nav-items{
-    float: right;
-    margin-top: 20px ;
+        float: right;
+    width: 600px;
+    margin-top: 20px;
 }
 .navbar .nav-item{
     display: inline-block;
@@ -237,6 +238,7 @@ navbar a{
     width: 75%;
     margin: -7px 0px 3px;
     padding: 6px;
+    border: 1px solid #324a34;
     border-radius: 30px;
     box-sizing: border-box;
     font-size: 14px;
@@ -373,9 +375,10 @@ navbar a{
 }
 
 .navbar i{
-        font-size: 15px;
+        font-size: 20px;
     color: #324a34;
     padding: 5px;
+    float:left;
     text-align: center;
     border-radius: 50%;
     align-items: center;
@@ -391,45 +394,94 @@ navbar a{
   background-color: #e9e9e9;
 }
 
+  /*############################### Search Bar ##########################*/
 
-
-
-
-.nav-items input[type=text] {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  border: none;
-  font-size: 17px;
-  border-radius:30px;
+  *{
+  box-sizing: border-box;
+}
+div.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.nav-items .input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #f4f4f4;
+  padding-right: 40px;
+  color:#324a34;
+}
+.nav-items .input-search::placeholder{
+  color:#324a34;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.nav-items .btn-search{
+  width: 50px;
+  height: 50px;
+  float:right;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#ffff ;
+  background-color:transparent;
+  pointer-events: painted;  
 }
 
-@media screen and (max-width: 600px) {
-  .nav-items input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  
-  .nav-items input[type=text] {
-    border: 1px solid #ccc;  
-  }
+.nav-items .btn-search:hover{
+    color:#324a34;
+}
+
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: #ffff;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.fa-comment:before{
+    content: "\f075";
+    right: -1px;
+    position: relative;
+}
+
     </style>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
         <div class="container">
-         <h1 class="logo lg-heading text-black">Dextérité</h1>
+         <h1 class="logo lg-heading text-black">Dexterité</h1>
             <ul class="nav-items">
                 
-                <li class="nav-item text-light"><a href="about.html" >Messages</a></li>
-                <li class="nav-item text-light"><a href="contact.html">Profile</li><i class="fa-solid fa-user"></i></a>
-                <input type="text" placeholder="Search..">
+            <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-comment"></i></a></li>
+            <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-user"></i></a></li>
+            
+           <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-bell" style="color: #324a34;"></i></a></li>     
+          <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
            </ul>
         </div>
         </nav>
@@ -599,3 +651,4 @@ navbar a{
 
 
             
+        
