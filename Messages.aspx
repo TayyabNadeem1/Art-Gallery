@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Messages.aspx.cs" Inherits="Dexterite.Messages" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Messages.aspx.cs" Inherits="Dexterite.Messages" %>
 
 <!DOCTYPE html>
 
@@ -81,7 +81,7 @@
             width: 25%;
             overflow: scroll;
             margin-top: 2%;
-            margin-right: 30px;
+            margin-right: 3px;
             border-radius: 40px;
         }
 
@@ -227,7 +227,7 @@
 
         .box2emptybox{
             height: 35px;
-            width: 665px;
+            width: 645px;
             margin-left:5px;
             margin-right: 5px;
             background-color: #f4f4f4;
@@ -241,6 +241,19 @@
             color: darkgray;
         }
 
+        .box2bottom{
+            display:flex;
+        }
+
+        .sendbutton{
+            height: 26px;
+            width: 22px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding-top:10px;
+            padding-left:10px;
+        }
+        
     </style>
 
 </head>
@@ -342,13 +355,16 @@
                         &nbsp; Lorem ipsum dolor sit amet
                     </div>
                 </div>
-
+                <div class="box2bottom">
                 <div class="box2emptybox">
                     <div class="box2emptyboxwriting">
                     Write a message...
                         </div>
                 </div>
-
+                    <div class="sendbutton">
+                        <b>></b>
+                    </div>
+                    </div>
 
             </div>
 
