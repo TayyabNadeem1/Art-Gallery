@@ -40,6 +40,11 @@ a{
     font-size: 1.6rem;
     color:#000000;
     text-decoration: none;
+
+}
+
+.navbar i:hover{
+   color:#43A047; 
 }
 
 p, li, i{
@@ -112,7 +117,7 @@ h1, h2, h3{
 
 .navbar .nav-items{
         float: right;
-    width: 600px;
+    width: 500px;
     margin-top: 20px;
 }
 .navbar .nav-item{
@@ -227,8 +232,8 @@ navbar a{
     float:left;
 }
 
-.symbols{
-
+.form i:hover{
+    color:#43A047;
 }
 
 .form input {
@@ -263,8 +268,8 @@ navbar a{
     color: #ffff;
 }
 
-.like-box{
-
+.like-box button:hover{
+    background:#43A047;
 }
 
 .like-box button{
@@ -368,14 +373,9 @@ navbar a{
     
 }
 
-.fa-user:before{
-    content: "\f007";
-    right: -1px;
-    position: relative;
-}
 
 .navbar i{
-        font-size: 20px;
+        font-size: 25px;
     color: #324a34;
     padding: 5px;
     float:left;
@@ -388,13 +388,30 @@ navbar a{
 }
 /*################################# Search bar ############################*/
 
+.fa-right-from-bracket:before, .fa-sign-out-alt:before {
+    content: "\f2f5";
+    position: relative;
+    right: -1.5px;
+}
+.fa-user:before{
+    content: "\f007";
+    right: -1.5px;
+    position: relative;
+}
+
+.fa-bell:before {
+    content: "\f0f3";
+    position: relative;
+    right: -1.5px;
+
+}
+
+
 .topnav {
 
   overflow: hidden;
   background-color: #e9e9e9;
 }
-
-  /*############################### Search Bar ##########################*/
 
   *{
   box-sizing: border-box;
@@ -447,7 +464,8 @@ div.search-box{
 
 .btn-search:focus ~ .input-search{
   width: 300px;
-  border-radius: 0px;
+  border-radius:20px;
+  
   background-color: #ffff;
   border-bottom:1px solid rgba(255,255,255,.5);
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
@@ -474,10 +492,11 @@ div.search-box{
          <h1 class="logo lg-heading text-black">Dexterité</h1>
             <ul class="nav-items">
                 
-            <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-comment"></i></a></li>
-            <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-user"></i></a></li>
+            <li class="nav-item text-light"><a href="Message.aspx"><i class="fa-solid fa-comment"></i></a></li>
+           <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-bell"></i></a></li>
+                <li class="nav-item text-light"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li class="nav-item text-light"><a href="Login.aspx"><i class="fa-solid fa-right-from-bracket"></i></a></li>
             
-           <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-bell" style="color: #324a34;"></i></a></li>     
           <div class="search-box">
             <button class="btn-search"><i class="fas fa-search"></i></button>
             <input type="text" class="input-search" placeholder="Type to Search...">
@@ -568,7 +587,7 @@ div.search-box{
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
                     <h2 class="text-black">someartist whocares</h2></a>
                 </div>
-                <img src="Cape Cod Collegiate.jpeg" /> 
+                <img src="Artist Profile_ Bea Modisett.jpeg" /> 
                 <div class="like-box">
                    <h2 class="text-red">Some Art</h2><button>Like</button>
                </div>
@@ -591,7 +610,7 @@ div.search-box{
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
                     <h2 class="text-black">someartist whocares</h2></a>
                 </div>
-                <img src="Artist Profile_ Bea Modisett.jpeg" />
+                <img src="Easy Acrylic Painting Ideas_ Abstract Landscape Tutorial.jpeg" />
                 <div class="like-box">
                    <h2 class="text-red">Some Art</h2><button>Like</button>
                </div>
@@ -615,7 +634,7 @@ div.search-box{
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
                     <h2 class="text-black">someartist whocares</h2></a>
                 </div>
-                <img src="login_background.jpeg" />
+                <img src="This Self-Taught Artist Draws Female Portraits Entirely By Scribbling (87 Pics).jpeg" />
                 <div class="like-box">
                    <h2 class="text-red">Some Art</h2><button>Like</button>
                </div>
