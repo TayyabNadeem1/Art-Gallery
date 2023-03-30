@@ -129,7 +129,7 @@
            .about{
                width:100%;
                padding: 100px 0px;
-               background-color: black;
+               background-color: #f4f4f4;
                color:#324a34; 
                font-family: Bahnschrift;
            }
@@ -198,6 +198,16 @@
               object-fit: contain;
            }
 
+           .footer{
+    background:#324a34;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+}
+.social-media-links i{
+    margin: 1.5rem;
+}
+
         </style>
     </head>
 
@@ -246,13 +256,19 @@
         
         <div class="artpiecesdiv">
             <div class="artimg1">
+                <a href="ArtProfile" target="_self">
                 <img src="Painting1.jpg" />
+                    </a>
             </div>
             <div class="artimg1">
+                <a href="ArtProfile" target="_self">
                 <img src="painting2.jpg" />
+                    </a>
             </div>
             <div class="artimg1">
+                <a href="ArtProfile" target="_self">
                 <img src="painting3.jpg" />
+                    </a>
             </div>
 
 
@@ -262,5 +278,8 @@
 
 
     </section>
+       
+
+
 </body>
 </html>
