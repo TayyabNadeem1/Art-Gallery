@@ -253,6 +253,10 @@
             padding-top:10px;
             padding-left:10px;
         }
+
+        .lolol{
+            font-size:25px;
+        }
         
     </style>
 
@@ -279,7 +283,7 @@
             <div class="box1">
 
                 <div class="people">
-                    Messages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + 
+                    <b>Messages</b> 
                 </div>
 
                 <div class="person">
@@ -340,7 +344,7 @@
                          <img src="amnaali.jpg" />
                      </div>
                      <div class="box2messagername">
-                     <b>Some Artist</b>
+                     <a class="lolol" href="UserPage.aspx" target="_self"><b>Some Artist</b></a>
                          </div>
                  </div>
 
