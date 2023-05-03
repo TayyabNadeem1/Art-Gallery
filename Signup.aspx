@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" Inherits="DB_Project.Signup" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" Inherits="Dexterite.Signup" %>
 
 <!DOCTYPE html>
 
@@ -6,6 +6,9 @@
 <head runat="server">
     <title></title>
 </head>
+    <script>
+        
+    </script>
     <style>
         .container{
     max-width: 1400px;
@@ -294,11 +297,18 @@ h1, h3{
            
             <div class="form">
                 <p class="my-heading"> Create Account</p>
-                <form class="login-form">
-              <input type="text" placeholder="name"/>
-              <input type="text" placeholder="email"/>
-              <input type="password" placeholder="password"/>
-              <button type="submit" formaction="Home.aspx">SignUp</button>
+                <form class="login-form" runat="server">
+
+                    <asp:TextBox ID="txtName" runat="server" placeholder="username" CssClass="input"></asp:TextBox>
+
+                    <asp:TextBox ID="TxtEmail" runat="server" placeholder="email" CssClass="input"></asp:TextBox>
+
+                    <asp:TextBox ID="TxtPassword" runat="server" placeholder="password" TextMode="Password" CssClass="input"></asp:TextBox>
+
+                    <asp:TextBox ID="TxtConfirm" runat="server" placeholder="confirm password" TextMode="Password" CssClass="input"></asp:TextBox>
+                   
+                    <asp:Button id="submit" OnClick="SignupCheck" runat="server" Text="login"></asp:Button>
+                                  
               <p class="message">Already have an account? <a href="Login.aspx">Login</a></p>
             </form>
             </div>
