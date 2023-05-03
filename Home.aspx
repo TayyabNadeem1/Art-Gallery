@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="DB_Project.Home1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Dexterite.Home" %>
 
 <!DOCTYPE html>
 
@@ -416,7 +416,7 @@ navbar a{
   *{
   box-sizing: border-box;
 }
-div.search-box{
+form.search-box{
   width: fit-content;
   height: fit-content;
   position: relative;
@@ -443,7 +443,6 @@ div.search-box{
 }
 .nav-items .btn-search{
   width: 50px;
-  height: 50px;
   float:right;
   border-style: none;
   font-size: 20px;
@@ -452,11 +451,12 @@ div.search-box{
   cursor: pointer;
   border-radius: 50%;
   position: absolute;
-  right: 0px;
-  color:#ffff ;
+  right: -218px;
+  color:#ffff;
   background-color:transparent;
-  pointer-events: painted;  
-}
+  pointer-events: painted;
+            top: -14px;
+        }
 
 .nav-items .btn-search:hover{
     color:#324a34;
@@ -493,20 +493,44 @@ div.search-box{
             <ul class="nav-items">
                 
             <li class="nav-item text-light"><a href="Message.aspx"><i class="fa-solid fa-comment"></i></a></li>
-           <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-bell"></i></a></li>
-                <li class="nav-item text-light"><a href="#"><i class="fa-solid fa-user"></i></a></li>
-                <li class="nav-item text-light"><a href="Login.aspx"><i class="fa-solid fa-right-from-bracket"></i></a></li>
-            
-          <div class="search-box">
-            <button class="btn-search"><i class="fas fa-search"></i></button>
-            <input type="text" class="input-search" placeholder="Type to Search...">
-          </div>
+            <li class="nav-item text-light"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+            <li class="nav-item text-light"><a href="UserPage.aspx"><i class="fa-solid fa-user"></i></a></li>
+            <li class="nav-item text-light"><a href="Login.aspx"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                
+          <form class="search-box" runat="server">
+            <asp:Button id="search" runat="server" CssClass="btn-search input-search " OnClick="search_box" Text="search"></asp:Button>
+                  <asp:TextBox ID="searchingName" runat="server" placeholder="Type to Search..."  CssClass="input-search btn-search"></asp:TextBox>
+              
+          </form>
            </ul>
         </div>
         </nav>
 
         <h2 class="title">Featured Arts</h2>
         <div class="raw">
+
+            <asp:DataList ID="datalist1" runat="server"
+                DataSourceID="SqlDataSource1" Height="293px" Width="310px"
+                RepeatColumn="4" RepeatDirection="Horizontal">
+                <ItemTemplate>
+                    <table>
+                        <tr>
+                            <td style="text-align:center; background-color:#f4f4f4">
+                                 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">
+                                <asp:Image id="Image1" runat="server" Height="279px" Width="278px" Text="<%#Eval(Picture) %>">
+                                
+                            </td>
+                        </tr>
+                    </table>
+
+                </ItemTemplate>
+
+            </asp:DataList>
+
             <div class="col-5">
                 <div class="profile-container"><a href="UserPage.aspx">  
                     <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
@@ -528,10 +552,9 @@ div.search-box{
                 <i class="likee fa-regular fa-heart"></i>
                 </div>
                 </form>
-                    
+               
               </div>  
             </div>
-
 
             <div class="col-5">
                  <div class="profile-container"><a href="UserPage.aspx"> 
@@ -739,4 +762,3 @@ div.search-box{
 
 
             
-        
