@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserPage.aspx.cs" Inherits="Dexterite.UserPage" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ArtistPage.aspx.cs" Inherits="dexterite4.ArtistPage" %>
 
 <!DOCTYPE html>
 
@@ -419,7 +419,7 @@ div.search-box{
             }*/
 
             .bigcontent{
-                background-color:#324a34;
+                background-color:#f4f4f4;
                 height: 480px;
                 display: flex;
                 align-items:center;
@@ -430,7 +430,7 @@ div.search-box{
                top: 50%;
                left:8%;
                transform: translateY(-50%);
-               padding-top:50px;
+               padding-top:335px;
            }
 
            h1{
@@ -470,14 +470,15 @@ div.search-box{
            .about{
                width:100%;
                padding: 100px 0px;
-               background-color: #f4f4f4;
+               background-color: #324a34;
                color:#324a34; 
                font-family: Bahnschrift;
+               border: 4px solid #324a34;
            }
 
 
            .aboutme{
-               color: #324a34;
+               color: black;
                
                padding-left:-40px;
            }
@@ -490,9 +491,13 @@ div.search-box{
            .abouth3
            {
                font-family: Bahnschrift;
-               color:#324a34;
+               color:black;
                font-size: 25px;
                margin-bottom: 50px;
+           }
+
+           .lolol{
+               color:black;
            }
            .main{
                width:1130px;
@@ -504,7 +509,7 @@ div.search-box{
            }
 
            .artpieces{
-               background-color:#324a34;
+               background-color:#f4f4f4;
                font-family: Bahnschrift;
           
            }
@@ -515,6 +520,7 @@ div.search-box{
 
            .myartpieces
            {
+               color: black;
                font-size: 40px;
                text-align: center;
                padding-top:5px;
@@ -566,8 +572,8 @@ div.search-box{
          <h1 class="logo lg-heading text-black">Dexterité</h1>
             <ul class="nav-items">
                 
-            <li class="nav-item text-light"><a href="Message.aspx"><i class="fa-solid fa-comment"></i></a></li>
-           <li class="nav-item text-light"><a href="contact.html"><i class="fa-solid fa-bell"></i></a></li>
+            <li class="nav-item text-light"><a href="Messages.aspx"><i class="fa-solid fa-comment"></i></a></li>
+           <li class="nav-item text-light"><a href="Home.aspx"><i class="fa-solid fa-house"></i></a></li>  
                 <li class="nav-item text-light"><a href="#"><i class="fa-solid fa-user"></i></a></li>
                 <li class="nav-item text-light"><a href="Login.aspx"><i class="fa-solid fa-right-from-bracket"></i></a></li>
             
@@ -583,12 +589,12 @@ div.search-box{
 
     <section class="bigcontent">
       <div class="content">
-        <h1>Samantha <span class="spanname">Harvey</span></h1>
+        <h1><asp:Label runat="server" ID="Label1" Text='<%#  Eval("name") %>'></asp:Label></h1>
         <h3>User</h3>
           
       </div>
         <div class="photo">
-              <img src="Artist2.jpg" />
+               <asp:Image runat="server" ID="Image1" ImageUrl='<%# Eval("Picture") %>' CssClass="img"/>
           </div>
   </section>
 
@@ -597,7 +603,7 @@ div.search-box{
             
             <div class="abouttext">
             <h3 class="abouth3">Interests</h3>
-              <p>Arylics<br />Sketches<br />Paintings</p>
+              <p class="lolol">Arylics<br />Sketches<br />Paintings</p>
         </div>
             <h1 class="aboutme">About Me</h1>
         </div>
@@ -612,21 +618,10 @@ div.search-box{
         <div class="artpiecesdiv">
             <div class="artimg1">
                 <a href="ArtProfile" target="_self">
-                <img src="Painting1.jpg" />
+                <asp:Image runat="server" ID="Image2" ImageUrl='<%# Eval("Picture") %>' CssClass="img"/>
                     </a>
             </div>
-            <div class="artimg1">
-                <a href="ArtProfile" target="_self">
-                <img src="painting2.jpg" />
-                    </a>
-            </div>
-            <div class="artimg1">
-                <a href="ArtProfile" target="_self">
-                <img src="painting3.jpg" />
-                    </a>
-            </div>
-
-
+            
 
         </div>
 
