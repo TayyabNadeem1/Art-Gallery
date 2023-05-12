@@ -3,10 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-    
-    
-    
-    <head>
+<head runat="server">
 
         <script src="https://kit.fontawesome.com/f25ee7bf20.js" crossorigin="anonymous"></script>
 
@@ -549,6 +546,7 @@ div.search-box{
     </head>
 
 <body>
+    <form id="form1" runat="server">
     <nav class="navbar">
         <div class="container">
          <h1 class="logo lg-heading text-black">Dexterité</h1>
@@ -581,18 +579,21 @@ div.search-box{
        </nav>
        <button>Contact</button>
    </header>--%>
+
+        
     <section class="bigcontent">
-      <div class="content">
-        <h1>Vincent <span class="spanname">Van Gogh</span></h1>
-        <h3>Artist</h3>
+      <section class="content">
           
-      </div>
+        <h1><asp:Label runat="server" ID="Label1" Text='<%#  Eval("name") %>'></asp:Label></h1>
+        <h3>Artist</h3>
+      </section>
+      
         <div class="photo">
-              <img src="Artist1.jpg" />
+              <asp:Image runat="server" ID="Image1" ImageUrl='<%# Eval("Picture") %>' CssClass="img"/>
           </div>
   </section>
 
-    <section class="about">
+    <div class="about">
         <div class="main">
             
             <div class="abouttext">
@@ -602,7 +603,7 @@ div.search-box{
             <h1 class="aboutme">About Me</h1>
         </div>
 
-    </section>
+    </div>
 
     <section class="artpieces">
         <div class="title">
@@ -612,29 +613,19 @@ div.search-box{
         <div class="artpiecesdiv">
             <div class="artimg1">
                 <a href="ArtProfile" target="_self">
-                <img src="Painting1.jpg" />
+                <asp:Image runat="server" ID="Image2" ImageUrl='<%# Eval("Picture") %>' CssClass="img"/>
                     </a>
             </div>
-            <div class="artimg1">
-                <a href="ArtProfile" target="_self">
-                <img src="painting2.jpg" />
-                    </a>
-            </div>
-            <div class="artimg1">
-                <a href="ArtProfile" target="_self">
-                <img src="painting3.jpg" />
-                    </a>
-            </div>
-
-
 
         </div>
 
 
 
     </section>
+                
+           
        
-
+        </form>
 
 </body>
 </html>
