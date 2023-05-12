@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Dexterite.Home" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="dexterite4.Home" %>
 
 <!DOCTYPE html>
 
@@ -497,11 +497,7 @@ form.search-box{
             <li class="nav-item text-light"><a href="UserPage.aspx"><i class="fa-solid fa-user"></i></a></li>
             <li class="nav-item text-light"><a href="Login.aspx"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 
-          <form class="search-box" runat="server">
-            <asp:Button id="search" runat="server" CssClass="btn-search input-search " OnClick="search_box" Text="search"></asp:Button>
-                  <asp:TextBox ID="searchingName" runat="server" placeholder="Type to Search..."  CssClass="input-search btn-search"></asp:TextBox>
-              
-          </form>
+       
            </ul>
         </div>
         </nav>
@@ -509,10 +505,7 @@ form.search-box{
         <h2 class="title">Featured Arts</h2>
         <div class="raw">
 
-            <asp:DataList ID="datalist1" runat="server"
-                DataSourceID="SqlDataSource1" Height="293px" Width="310px"
-                RepeatColumn="4" RepeatDirection="Horizontal">
-                <ItemTemplate>
+            
                     <table>
                         <tr>
                             <td style="text-align:center; background-color:#f4f4f4">
@@ -521,15 +514,13 @@ form.search-box{
                         </tr>
                         <tr>
                             <td style="text-align:center">
-                                <asp:Image id="Image1" runat="server" Height="279px" Width="278px" Text="<%#Eval(Picture) %>">
+                                 <asp:Image runat="server" ID="Image1" ImageUrl='<%# Eval("Picture") %>' CssClass="img"/>
                                 
                             </td>
                         </tr>
                     </table>
 
-                </ItemTemplate>
-
-            </asp:DataList>
+                
 
             <div class="col-5">
                 <div class="profile-container"><a href="UserPage.aspx">  
@@ -607,12 +598,12 @@ form.search-box{
         <div class="raw">
             <div class="col-5">
                 <div class="profile-container"> <a href="UserPage.aspx">
-                    <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2></a>
+                    <asp:Image runat="server" ID="Image12" Width="60" Height="60"/>
+                    <h2 class="text-black"><asp:Label runat="server" ID="Label11" Text='<%#  Eval("name") %>'></asp:Label></h2></a>
                 </div>
-                <img src="Artist Profile_ Bea Modisett.jpeg" /> 
+                <asp:Image runat="server" ID="Image13" Width="250" Height="250"/> 
                 <div class="like-box">
-                   <h2 class="text-red">Some Art</h2><button>Like</button>
+                   <h2 class="text-red"><asp:Label runat="server" ID="Label12" Text='<%#  Eval("name") %>'></asp:Label></h2><button>Like</button>
                </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia perferendis</h4>
                 
@@ -630,12 +621,12 @@ form.search-box{
             </div>
             <div class="col-5">
                  <div class="profile-container"> <a href="UserPage.aspx">
-                    <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2></a>
+                     <asp:Image runat="server" ID="Image10" Width="60" Height="60"/>
+                    <h2 class="text-black"><asp:Label runat="server" ID="Label9" Text='<%#  Eval("name") %>'></asp:Label></h2></a>
                 </div>
-                <img src="Easy Acrylic Painting Ideas_ Abstract Landscape Tutorial.jpeg" />
+                <asp:Image runat="server" ID="Image11" Width="250" Height="250"/>
                 <div class="like-box">
-                   <h2 class="text-red">Some Art</h2><button>Like</button>
+                   <h2 class="text-red"><asp:Label runat="server" ID="Label10" Text='<%#  Eval("name") %>'></asp:Label></h2><button>Like</button>
                </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium  voluptatem saepe recusandae ducimus dolor laudantium cum. Incidunt, earum.</h4>
 
@@ -654,12 +645,12 @@ form.search-box{
             </div>
             <div class="col-5">
                  <div class="profile-container"> <a href="UserPage.aspx">
-                    <img src="Smart Pest Control (smartpestcontrol) - Profile _ Pinterest.jpeg" />
-                    <h2 class="text-black">someartist whocares</h2></a>
+                    <asp:Image runat="server" ID="Image8" Width="60" Height="60"/>
+                    <h2 class="text-black"><asp:Label runat="server" ID="Label7" Text='<%#  Eval("name") %>'></asp:Label></h2></a>
                 </div>
-                <img src="This Self-Taught Artist Draws Female Portraits Entirely By Scribbling (87 Pics).jpeg" />
+                <asp:Image runat="server" ID="Image9" Width="250" Height="250"/>
                 <div class="like-box">
-                   <h2 class="text-red">Some Art</h2><button>Like</button>
+                   <h2 class="text-red"><asp:Label runat="server" ID="Label8" Text='<%#  Eval("name") %>'></asp:Label></h2><button>Like</button>
                </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia .</h4>         
                 <div class="form">
@@ -678,12 +669,12 @@ form.search-box{
         <div class="raw">
             <div class="col-5">
                 <div class="profile-container"> <a href="UserPage.aspx">
-                    <img src="The Natural Artist Dmitri Danish.jpeg"/>
-                    <h2 class="text-black">someartist whocares</h2></a>
+                    <asp:Image runat="server" ID="Image6" Width="60" Height="60"/>
+                    <h2 class="text-black"><asp:Label runat="server" ID="Label5" Text='<%#  Eval("name") %>'></asp:Label></h2></a>
                 </div>
-                <img src="Cape Cod Collegiate.jpeg" /> 
+                <asp:Image runat="server" ID="Image7" Width="250" Height="250"/> 
                 <div class="like-box">
-                   <h2 class="text-red">Some Art</h2><button>Like</button>
+                   <h2 class="text-red"><asp:Label runat="server" ID="Label6" Text='<%#  Eval("name") %>'></asp:Label></h2><button>Like</button>
                </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia perferendis</h4>
                 
@@ -701,12 +692,12 @@ form.search-box{
             </div>
             <div class="col-5">
                  <div class="profile-container"> <a href="UserPage.aspx">
-                    <img src="This Self-Taught Artist Draws Female Portraits Entirely By Scribbling (87 Pics).jpeg"/>
-                    <h2 class="text-black">someartist whocares</h2></a>
+                    <asp:Image runat="server" ID="Image4" Width="60" Height="60"/>
+                    <h2 class="text-black"><asp:Label runat="server" ID="Label3" Text='<%#  Eval("name") %>'></asp:Label></h2></a>
                 </div>
-                <img src="Artist Profile_ Bea Modisett.jpeg" />
+                <asp:Image runat="server" ID="Image5" Width="250" Height="250"/>
                 <div class="like-box">
-                   <h2 class="text-red">Some Art</h2><button>Like</button>
+                   <h2 class="text-red"><asp:Label runat="server" ID="Label4" Text='<%#  Eval("name") %>'></asp:Label></h2><button>Like</button>
                </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium  voluptatem saepe recusandae ducimus dolor laudantium cum. Incidunt, earum.</h4>
 
@@ -725,12 +716,12 @@ form.search-box{
             </div>
             <div class="col-5">
                  <div class="profile-container"> <a href="UserPage.aspx">
-                    <img src="Artist Creates Incredibly Illuminated Architectural Drawings (12 Pics).jpeg"/>
-                    <h2 class="text-black">someartist whocares</h2></a>
+                     <asp:Image runat="server" ID="Image2" Width="60" Height="60"/>
+                    <h2 class="text-black"><asp:Label runat="server" ID="Label1" Text='<%#  Eval("name") %>'></asp:Label></h2></a>
                 </div>
-                <img src="login_background.jpeg" />
+                <asp:Image runat="server" ID="Image3" Width="250" Height="250"/>
                 <div class="like-box">
-                   <h2 class="text-red">Some Art</h2><button>Like</button>
+                   <h2 class="text-red"><asp:Label runat="server" ID="Label2" Text='<%#  Eval("name") %>'></asp:Label></h2><button>Like</button>
                </div>
                 <h4 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatibus adipisci, amet fugiat praesentium porro soluta corporis, veritatis minima mollitia .</h4>         
                 <div class="form">
@@ -759,6 +750,3 @@ form.search-box{
 
 </body>
 </html>
-
-
-            
